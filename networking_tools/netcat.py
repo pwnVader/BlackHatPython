@@ -77,7 +77,7 @@ class NetCat:
             cmd_buffer = b''
             while True:
                 try:
-                    client_socket.send(b'BHP: #> ')
+                    client_socket.send(b'Hacked: #> ')
                     while '\n' not in cmd_buffer.decode():
                         cmd_buffer += client_socket.recv(64)
                     response = execute(cmd_buffer.decode())
